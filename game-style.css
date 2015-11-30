@@ -1,0 +1,14 @@
+.story-panel {
+    margin-top: 200px;
+    
+    /*center the panel*/
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+#name-entry, #intro, #wolves, #vending-machine, #vending-outcome {
+    display: none;
+}

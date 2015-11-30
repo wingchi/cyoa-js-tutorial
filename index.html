@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choose Your Own Javascript Adventure</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="game-style.css">
+</head>
+
+<body>
+  <div id="start" class="story-panel">
+    <h1>Press Start to begin your adventure!</h1>
+    <!-- Listen to this button to load the name entry panel -->
+    <button id="start-button" type="button" class="btn btn-danger btn-lg">
+      START
+    </button>
+  </div>
+
+  <div id="name-entry" class="story-panel">
+    <h2>Adventurer what is your name?</h2>
+    <div class="input-group">
+      <span class="input-group-addon" id="name-addon">My Name Is</span>
+      <!-- Here's the input where we want to grab the adventurer's name -->
+      <input id="adventurer-name" type="text" class="form-control" placeholder="Helvetica the Default" aria-describedby="name-addon">
+    </div>
+    <br>
+    <button id="save-name-button" type="button" class="btn btn-success">Continue</button>
+  </div>
+
+  <div id="intro" class="story-panel">
+    <h2>Hello <span id="name-blank"></span></h2>
+    <p>
+      Oh My! Suddenly you are no longer in at Startup Institute!
+    </p>
+    <p>
+      In fact, you find yourself in front of a mysterious cave. What will you do?
+    </p>
+    <p>
+      <button id="click-heels-button" class="btn btn-danger">Click my heels 3 times and says "There's no place like Startup Institute"</button>
+      <br><br>
+      <button id="enter-cave-button" class="btn btn-info">Grab my laptop and go into the cave</button>
+    </p>
+  </div>
+
+  <div id="wolves" class="story-panel">
+    <h2>Wait a minute....</h2>
+    <p>
+      Your shoes aren't even magical. What are you doing?
+    </p>
+    <p>
+      Your clicking only manages to attract a pack of hungry wolves.
+    </p>
+    <p>
+      They eat you while you're talking to yourself.
+    </p>
+    <h3><i class="fa fa-frown-o"></i></h3>
+    <p>
+      <button id="wolves-restart-button" class="btn btn-danger">Restart Game</button>
+    </p>
+  </div>
+
+  <div id="vending-machine" class="story-panel">
+    <h2>How odd for there to be a vending machine in here</h2>
+    <p>
+      There's a vending machine in the cave. But you can't see the contents.
+    </p>
+    <p>
+      In fact, there's only a slot for money and not much else.
+    </p>
+    <p>
+      You realized you haven't had lunch yet.
+    </p>
+    <p>
+      Maybe if you put money into the machine it'll give you something to boost your HP.
+    </p>
+    <h3>How much money do you put into the mysterious vending machine?</h3>
+    <div class="input-group">
+      <span class="input-group-addon" id="payment-addon">$</span>
+      <!-- Here's the input where we want to grab the adventurer's name -->
+      <input id="vending-payment" type="text" class="form-control" placeholder="0" aria-describedby="payment-addon">
+      <span class="input-group-btn">
+        <button id="pay-vending-button" class="btn btn-success" type="button">Insert My Money</button>
+      </span>
+    </div>
+  </div>
+
+  <div id="vending-outcome" class="story-panel">
+    <h2>Cool! You got a <span id="vending-item-blank"></span>!</h2>
+    <p>
+      You eat it and gain <span id="vending-hp-blank"></span> HP.
+    </p>
+    <p>
+      Your current HP is now <span id="current-hp-blank"></span>.
+    </p>
+    <p>
+      <button id="explore-more-button" class="btn btn-warning">Venture deeper into the cave</button>
+    </p>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>

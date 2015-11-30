@@ -127,19 +127,53 @@
   </div>
 
   <div id="runaway" class="story-panel">
-    <h2>The entrance collapses suddenly</h2>
+    <h2>The entrance collapses</h2>
     <p>
       There's no where to run.
     </p>
     <p>The Fire Fox bites you from behind and you lose 10 HP.</p>
     <h3>Looks like you must fight!</h3>
     <p>
-      <button id="ranaway-fight-button" class="btn btn-warning">Fight the Fire Fox</button>
+      <button id="runaway-fight-button" class="btn btn-warning">Fight the Fire Fox</button>
     </p>
   </div>
 
   <div id="fight" class="story-panel">
+    <div id="firefox-stats">
+      <h1><i class="fa fa-firefox"></i> HP: <span id="firefox-hp-blank">100</span></h1>
+    </div>
+    <p id="adv-attack-message"></p>
+    <p id="ff-attack-message"></p>
+    <div class="attack-buttons">
+      <button id="laptop-attack" class="btn btn-success">Hit it with your laptop</button><button id="phone-attack" class="btn btn-info">Throw your phone at it</button><br><button id="punch-attack" class="btn btn-warning">Punch it</button><button id="insult-attack" class="btn btn-danger">Insult its mother</button>
+    </div>
+  </div>
 
+  <div id="defeat" class="story-panel">
+    <h1>Defeat</h1>
+    <p>
+      The Fire Fox has eaten you.
+    </p>
+    <h3><i class="fa fa-frown-o"></i></h3>
+    <p>
+      <button id="firefox-restart-button" class="btn btn-danger">Restart Game</button>
+    </p>
+  </div>
+
+  <div id="victory" class="story-panel">
+    <h1>Victory</h1>
+    <p>
+      You have bested the Fire Fox in battle!
+    </p>
+    <p>
+      As it fades away it opens up a portal back to Startup Institute.
+    </p>
+    <p>
+      Apparently weeks have passed and it's time to give your 60 second pitch! At least you'll have a crazy story to tell!
+    </p>
+    <p>
+      <button id="victory-replay-button" class="btn btn-success">Replay Game</button>
+    </p>
   </div>
 
 

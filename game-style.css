@@ -1,5 +1,4 @@
 .story-panel {
-    margin-top: 200px;
     
     /*center the panel*/
     width: 50%;
@@ -9,6 +8,10 @@
     text-align: center;
 }
 
-#name-entry, #intro, #wolves, #vending-machine, #vending-outcome {
+#stats {
+    margin-top: 200px;
+}
+
+#name-entry, #intro, #wolves, #vending-machine, #vending-outcome, #firefox, #firefox-surprise, #runaway {
     display: none;
 }

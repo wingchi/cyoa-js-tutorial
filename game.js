@@ -11,6 +11,7 @@ document.getElementById('start-button').onclick = function () {
 document.getElementById('save-name-button').onclick = function() {
     name = document.getElementById('adventurer-name').value;
     document.getElementById('name-blank').innerHTML = name;
+    document.getElementById('stat-name-blank').innerHTML = name;
 
     document.getElementById('name-entry').style.display = 'none';
     document.getElementById('intro').style.display = 'block';
@@ -46,6 +47,7 @@ document.getElementById('pay-vending-button').onclick = function() {
     var itemBlank = document.getElementById('vending-item-blank');
     var hpGainBlank = document.getElementById('vending-hp-blank');
     var currentHpBlank = document.getElementById('current-hp-blank');
+    var statHpBlank = document.getElementById('stat-hp-blank');
 
     // Check if the payment is not null and greater than 0
     if (payment && payment > 0) {
@@ -65,6 +67,7 @@ document.getElementById('pay-vending-button').onclick = function() {
         itemBlank.innerHTML = item;
         hpGainBlank.innerHTML = hpGain;
         currentHpBlank.innerHTML = hp;
+        statHpBlank.innerHTML = hp;
 
         document.getElementById('vending-machine').style.display = 'none';
         document.getElementById('vending-outcome').style.display = 'block';
@@ -73,3 +76,21 @@ document.getElementById('pay-vending-button').onclick = function() {
         alert("You must put some money into the machine to continue.");
     }
 }
+
+document.getElementById('explore-more-button').onclick = function() {
+    document.getElementById('vending-outcome').style.display = 'none';
+    document.getElementById('firefox').style.display = 'block';
+    setTimeout(
+        function() {
+            document.getElementById('firefox-surprise').style.display = 'block';
+        }, 3000);
+}
+
+// runaway outcome
+document.getElementById('run-choice-button').onclick = function() {
+    document.getElementById('firefox').style.display = 'none';
+    document.getElementById('runaway').style.display = 'block';
+    hp = hp - 10; // drop the adventurers HP by 10 because they tried to run away
+    document.getElementById('stat-hp-blank').innerHTML = hp;
+}
+

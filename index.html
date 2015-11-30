@@ -11,6 +11,14 @@
 </head>
 
 <body>
+
+  <div id="stats" class="story-panel">
+    <h1>
+      Name: <span id="stat-name-blank" class="name-field">Unknown</span>
+      &nbsp;&nbsp;HP: <span id="stat-hp-blank" class="hp-field">50</span> 
+    </h1>
+  </div>
+
   <div id="start" class="story-panel">
     <h1>Press Start to begin your adventure!</h1>
     <!-- Listen to this button to load the name entry panel -->
@@ -31,7 +39,7 @@
   </div>
 
   <div id="intro" class="story-panel">
-    <h2>Hello <span id="name-blank"></span></h2>
+    <h2>Hello <span id="name-blank" class="name-field"></span></h2>
     <p>
       Oh My! Suddenly you are no longer in at Startup Institute!
     </p>
@@ -93,11 +101,45 @@
       You eat it and gain <span id="vending-hp-blank"></span> HP.
     </p>
     <p>
-      Your current HP is now <span id="current-hp-blank"></span>.
+      Your current HP is now <span id="current-hp-blank" class="hp-field"></span>.
     </p>
     <p>
       <button id="explore-more-button" class="btn btn-warning">Venture deeper into the cave</button>
     </p>
+  </div>
+
+  <div id="firefox" class="story-panel">
+    <h2>Your explore for awhile</h2>
+    <p>
+      and you end up solving some complex puzzles and collecting all manner of colorful gemstones.
+    </p>
+    <p>
+      But suddenly...
+    </p>
+    <div id="firefox-surprise">
+      <h1>A Wild Fire Fox Appeared! <i class="fa fa-firefox"></i></h1>
+      <h3>It looks hungry. What will you do?</h3>
+      <p>
+        <button id="fight-choice-button" class="btn btn-danger">Fight the Fire Fox</button>
+        <button id="run-choice-button" class="btn btn-primary">Run Away!</button>
+      </p>
+    </div>
+  </div>
+
+  <div id="runaway" class="story-panel">
+    <h2>The entrance collapses suddenly</h2>
+    <p>
+      There's no where to run.
+    </p>
+    <p>The Fire Fox bites you from behind and you lose 10 HP.</p>
+    <h3>Looks like you must fight!</h3>
+    <p>
+      <button id="ranaway-fight-button" class="btn btn-warning">Fight the Fire Fox</button>
+    </p>
+  </div>
+
+  <div id="fight" class="story-panel">
+
   </div>
 
 
